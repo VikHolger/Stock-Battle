@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 namespace StockBattle
 {
@@ -6,7 +7,17 @@ namespace StockBattle
     {
         public void print ()
         {
-            Console.WriteLine("is it doing it right?");
+            Log();
+            Console.WriteLine("have now logged");
+        }
+
+        public async void Log()
+        {
+            DateTime dt = DateTime.Now;
+            string lines = $"{dt}: First line";
+
+            using StreamWriter file = new(@".\logs\market.log", append: true);
+            await file.WriteLineAsync(lines);
         }
     }
 }

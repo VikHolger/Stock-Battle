@@ -4,10 +4,11 @@ namespace StockBattle
 {
     class start
     {
-        Market m = new Market();
         static void Main(string[] args)
         {
+            Market m = new Market();
             Console.WriteLine("Comming soon");
+            m.print();
         }
     }
 }

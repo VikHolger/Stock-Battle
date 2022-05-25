@@ -1,0 +1,15 @@
+C:\Git\Stock-Battle\bin\Debug\net6.0\Stock-Battle.exe
+C:\Git\Stock-Battle\bin\Debug\net6.0\Stock-Battle.deps.json
+C:\Git\Stock-Battle\bin\Debug\net6.0\Stock-Battle.runtimeconfig.json
+C:\Git\Stock-Battle\bin\Debug\net6.0\Stock-Battle.dll
+C:\Git\Stock-Battle\bin\Debug\net6.0\ref\Stock-Battle.dll
+C:\Git\Stock-Battle\bin\Debug\net6.0\Stock-Battle.pdb
+C:\Git\Stock-Battle\obj\Debug\net6.0\Stock-Battle.csproj.AssemblyReference.cache
+C:\Git\Stock-Battle\obj\Debug\net6.0\Stock-Battle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\Stock-Battle\obj\Debug\net6.0\Stock-Battle.AssemblyInfoInputs.cache
+C:\Git\Stock-Battle\obj\Debug\net6.0\Stock-Battle.AssemblyInfo.cs
+C:\Git\Stock-Battle\obj\Debug\net6.0\Stock-Battle.csproj.CoreCompileInputs.cache
+C:\Git\Stock-Battle\obj\Debug\net6.0\Stock-Battle.dll
+C:\Git\Stock-Battle\obj\Debug\net6.0\ref\Stock-Battle.dll
+C:\Git\Stock-Battle\obj\Debug\net6.0\Stock-Battle.pdb
+C:\Git\Stock-Battle\obj\Debug\net6.0\Stock-Battle.genruntimeconfig.cache

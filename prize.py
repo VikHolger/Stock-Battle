@@ -42,15 +42,15 @@ for stk in stocks:
 
     #Visual
     if loading == 0:
-        print(f"{n}/{t} | .    \n", end="\r")
+        print(f"{n}/{t} | .    ", end="\r")
         loading = 1
 
     elif loading == 1:
-        print(f"{n}/{t} | ..   \n", end="\r")
+        print(f"{n}/{t} | ..   ", end="\r")
         loading = 2
 
     elif loading == 2:
-        print(f"{n}/{t} | ... \n", end="\r")
+        print(f"{n}/{t} | ... ", end="\r")
         loading = 0
 
     try:

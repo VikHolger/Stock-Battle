@@ -17,6 +17,9 @@ The program gets the stock information by running [prize.py](./prize.py). The py
 <a name="STV"></a>
 ## Statistic Viewer
 
+https://matplotlib.org/stable/gallery/widgets/buttons.html
+https://www.python-graph-gallery.com/donut-plot/
+
 <a name="EMU"></a>
 ## Emulator
 

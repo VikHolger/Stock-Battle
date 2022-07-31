@@ -2,6 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 
+from sklearn import exceptions
+
 stocks = []
 
 #Get stock info
@@ -27,11 +29,29 @@ with open("stocks.stk", "r") as stockFile:
         a = stk.split("|")        
         stocks.append(a[0].rstrip())
 
+#stats
+n = 0
+t = len(stocks)
+loading = 0
+normal = 0
+exeptions = 0
 #open stock and get info
 for stk in stocks:
-    print("getting info about " + str(stk))
     now = datetime.now() #Get the time
     current_time = now.strftime("%m/%d %H:%M:%S")
+
+    #Visual
+    if loading == 0:
+        print(f"{n}/{t} | .    \n", end="\r")
+        loading = 1
+
+    elif loading == 1:
+        print(f"{n}/{t} | ..   \n", end="\r")
+        loading = 2
+
+    elif loading == 2:
+        print(f"{n}/{t} | ... \n", end="\r")
+        loading = 0
 
     try:
         #Get the data/Info aout stock
@@ -40,17 +60,27 @@ for stk in stocks:
 
         for i in inf:
             line += "|" + str(i) #Saves it to a string
+        line += "\n"
 
         #saves data to file
         with open("./prize/" +str(stk) + ".stk", "a") as f:
             f.write(line)
+
+        normal += 1
     #If it didnt succeed
     except:
         with open("./log/PRZ.log", "a") as log:
-            err = str(current_time) + "could not find URL/Info for stock" + str(stk)
+            err = str(current_time) + " | err -> could not find URL/Info for stock " + str(stk) + "\n"
             print(err)
             log.write(err)
+            exeptions += 1
 
-    
+    n += 1
 
-    
+#Write to Log
+now = datetime.now() #Get the time
+current_time = now.strftime("%m/%d %H:%M:%S")
+with open("./log/PRZ.log", "a") as log:
+    info = str(current_time) + " | info -> Uppdated " + str(normal) + " number of stocks, " + str(exeptions) + " exceptions\n"
+    print(info)
+    log.write(info)

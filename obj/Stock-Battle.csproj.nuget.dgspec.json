@@ -1,23 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Git\\Stock-Battle\\Stock-Battle.csproj": {}
+    "C:\\programingProgerams\\Git\\Stock-Battle\\Stock-Battle.csproj": {}
   },
   "projects": {
-    "C:\\Git\\Stock-Battle\\Stock-Battle.csproj": {
+    "C:\\programingProgerams\\Git\\Stock-Battle\\Stock-Battle.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\Stock-Battle\\Stock-Battle.csproj",
+        "projectUniqueName": "C:\\programingProgerams\\Git\\Stock-Battle\\Stock-Battle.csproj",
         "projectName": "Stock-Battle",
-        "projectPath": "C:\\Git\\Stock-Battle\\Stock-Battle.csproj",
-        "packagesPath": "C:\\Users\\19vier\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\Stock-Battle\\obj\\",
+        "projectPath": "C:\\programingProgerams\\Git\\Stock-Battle\\Stock-Battle.csproj",
+        "packagesPath": "C:\\Users\\VikHo\\.nuget\\packages\\",
+        "outputPath": "C:\\programingProgerams\\Git\\Stock-Battle\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\19vier\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\VikHo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -26,7 +28,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/discord-net/api/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -58,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.105\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

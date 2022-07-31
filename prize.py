@@ -4,13 +4,13 @@ from datetime import datetime
 
 stocks = []
 
-def stock_price(symbol: str = "AAPL") -> str:
+def stock_price(symbol: str) -> str:
     inf = []
     url = f"https://finance.yahoo.com/quote/{symbol}/"
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
     #prise
-    prz = soup.find("fin-streamer", class_="Fw(b) Fz(36px) Mb(-4px) D(ib)").text
+    prz = soup.find("fin-streamer", class_="Fw(b) Fz(36px) Mb(-4px) D(ib)").text.replace(",","")
     inf.append(round((float(prz)), 2))
     #change %
     change = soup.find("fin-streamer", class_="Fw(500) Pstart(8px) Fz(24px)").text
@@ -23,10 +23,12 @@ def stock_price(symbol: str = "AAPL") -> str:
 
 with open("stocks.stk", "r") as stockFile:
     for stk in stockFile:
-        stocks.append(stk.rstrip("\n"))
+        a = stk.split("|")        
+        stocks.append(a[0].rstrip())
 
 for stk in stocks:
-    inf = stock_price(stk)
+    print("getting info about " + str(stk))
+    inf = stock_price(str(stk))
     now = datetime.now()
     current_time = now.strftime("%m/%d %H:%M:%S")
     line = str(current_time)

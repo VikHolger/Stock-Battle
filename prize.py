@@ -4,6 +4,7 @@ from datetime import datetime
 
 stocks = []
 
+#Get stock info
 def stock_price(symbol: str) -> str:
     inf = []
     url = f"https://finance.yahoo.com/quote/{symbol}/"
@@ -20,20 +21,36 @@ def stock_price(symbol: str) -> str:
     inf.append(round((float(prz)), 2))
     return inf
 
-
+#Get the stocks "name"
 with open("stocks.stk", "r") as stockFile:
     for stk in stockFile:
         a = stk.split("|")        
         stocks.append(a[0].rstrip())
 
+#open stock and get info
 for stk in stocks:
     print("getting info about " + str(stk))
-    inf = stock_price(str(stk))
-    now = datetime.now()
+    now = datetime.now() #Get the time
     current_time = now.strftime("%m/%d %H:%M:%S")
-    line = str(current_time)
-    for i in inf:
-        line += "|" + str(i)
 
-    with open("./prize/" +str(stk) + ".stk", "a") as f:
-        f.write(line)
+    try:
+        #Get the data/Info aout stock
+        inf = stock_price(str(stk))
+        line = str(current_time)
+
+        for i in inf:
+            line += "|" + str(i) #Saves it to a string
+
+        #saves data to file
+        with open("./prize/" +str(stk) + ".stk", "a") as f:
+            f.write(line)
+    #If it didnt succeed
+    except:
+        with open("./log/PRZ.log", "a") as log:
+            err = str(current_time) + "could not find URL/Info for stock" + str(stk)
+            print(err)
+            log.write(err)
+
+    
+
+    

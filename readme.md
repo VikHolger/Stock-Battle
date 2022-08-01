@@ -1,13 +1,14 @@
 # Stock Battle #
 This project is about trying to create different types of algorithm and seeing how badly they preform. They do this in a custom emmulator, but use the live prize & data to simulate it.
 
+**Version: 0.1.0**
+
 ## Table of content
 - [Geting Stock information](#PRZ)
 - [Statistic Viewer](#STV)
 - [Emulator](#EMU)
 - [Algorithm](#ALG)
 - [Export](#EXP)
-
 
 <a name="PRZ"></a>
 ## Geting Stock information

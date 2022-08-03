@@ -73,12 +73,18 @@ example and meaning:
 | **Equlirian Portfoilo x** | | EP-x | liquid asset > x% → Bys: Random stock in a category it has less % shares in; liquid asset ≤ x% → Sell:  Random stock in a category it has most % shares in |
 | **Socialist Portfoilo x** | | SP-x | liquid asset > x% → Bys: Random stock in a category it has less value in; liquid asset ≤ x% → Sell: Random stock in portfoilo in a catoegory with highest value in|
 | **One of the Crowd** | | OoC | Trades wiht the stock that is the most active |
+| **By my Seld x** | | BmS | Trades wiht the stock that is the less active |
 | **Looper** | True | L-T | has a list alphabticly sorted. trades with the top one, then go down 1 step. |
 | | Anti | L-A | has a list alphabticly sorted. trades with the bottom one, then go up 1 step. |
-| **Timeu** | | T | Trades with the stock that has booth numbers in the minut place in it shares value |
-| **Dateu** | | D | Trades shares that has atleast 3 of the nummbers in todays date (yyyy-mm-dd) |
 
 ### When to trade
+| Name | Short Name | Description |
+| :--: | :--------: | :---------- |
+| **Random x** | R-x | Trades randomily, aproximatley x% of the time |
+| **One of the Crowd x** | O-x | Trades when more then x‰ of shares is activly traded today |
+| **By my Seld x** | B-x | Trades when less then x‰ of shares is activly traded today |
+| **Timeu** | T | Trades with the stock if it has booth  minut numbers in in the shares value |
+| **Dateu** | D | Trades shares if it has at least 3 of the nummbers in todays date (yyyy-mm-dd) |
 
 ### How many to Trade
 
